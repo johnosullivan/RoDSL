@@ -4,7 +4,7 @@
 object App {
 
   def main(args: Array[String]): Unit = {
-    println("john was here")
+    
   }
 
 }
