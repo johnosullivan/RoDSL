@@ -38,6 +38,12 @@
       <property name="caretWidth" class="java.lang.Integer" />
     </properties>
   </component>
+  <component name="HydraSettings">
+    <option name="hydraStorePath" value="$PROJECT_DIR$/.hydra/idea" />
+    <option name="noOfCores" value="4" />
+    <option name="projectRoot" value="$PROJECT_DIR$" />
+    <option name="sourcePartitioner" value="auto" />
+  </component>
   <component name="InspectionProjectProfileManager">
     <profile version="1.0">
       <option name="myName" value="Project Default" />
@@ -80,6 +86,8 @@
           </set>
         </option>
         <option name="sbtVersion" value="0.13.16" />
+        <option name="useAutoImport" value="true" />
+        <option name="useOurOwnAutoImport" value="true" />
       </SbtProjectSettings>
     </option>
   </component>
@@ -87,9 +95,8 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
   <component name="libraryTable">
-    <library name="SBT: org.scala-lang:scala-library:2.12.1:jar" type="Scala">
+    <library name="sbt: org.scala-lang:scala-library:2.12.1:jar" type="Scala">
       <properties>
-        <option name="languageLevel" value="Scala_2_12" />
         <compiler-classpath>
           <root url="file://$USER_HOME$/.ivy2/cache/jline/jline/jars/jline-2.14.1.jar" />
           <root url="file://$USER_HOME$/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/bundles/scala-xml_2.12-1.0.6.jar" />
