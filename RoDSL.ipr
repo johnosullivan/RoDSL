@@ -50,6 +50,13 @@
     </profile>
     <version value="1.0" />
   </component>
+  <component name="ProjectDictionaryState">
+    <dictionary name="johnosullivan">
+      <words>
+        <w>gpio</w>
+      </words>
+    </dictionary>
+  </component>
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/rodsl.iml" filepath="$PROJECT_DIR$/.idea/modules/rodsl.iml" />
@@ -73,7 +80,10 @@
     </option>
   </component>
   <component name="ScalaCompilerConfiguration">
-    <profile name="SBT 1" modules="rodsl" />
+    <profile name="SBT 1" modules="" />
+    <profile name="sbt 1" modules="rodsl">
+      <option name="postfixOps" value="true" />
+    </profile>
   </component>
   <component name="ScalaSbtSettings">
     <option name="linkedExternalProjectsSettings">
