@@ -31,6 +31,11 @@ object App {
 
       println(resetPin)
 
+
+      var pin7 = GPIO(7)
+      pin7.open(out)
+      pin7.write(on)
+
       // DO SOMETHING
 
       /*if (armServo1 move to 2700) {
