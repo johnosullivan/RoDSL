@@ -12,9 +12,11 @@ object App {
   object gpio { def pin(name: Any): PIN = new PIN(name) }
 
   class PIN(val name: Any) {
+
     def set(obj: AnyRef): Int = {
       1
     }
+
     def direction(obj: AnyRef): PIN = new PIN(name)
   }
 
@@ -31,6 +33,9 @@ object App {
 
       // DO SOMETHING
 
+      /*if (armServo1 move to 2700) {
+
+      }*/
 
 
 
