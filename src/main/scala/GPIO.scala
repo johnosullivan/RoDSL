@@ -48,8 +48,8 @@ class GPIO(pin: Int) {
   }
 
   def close: Unit = {
-    val portAccessFile = new File(s"$filepath/gpio$pin")
-    if (portAccessFile.exists()) {
+    val path = new File(s"$filepath/gpio$pin")
+    if (path.exists()) {
       write(Analog(pin.toString), Paths get s"$filepath/unexport")
     }
   }
@@ -60,8 +60,8 @@ class GPIO(pin: Int) {
 
   def read: Value = {
     val asAnalog: PartialFunction[String, Analog] = { case v @ _ => Analog(v) }
-    val readValue = asDigital orElse asAnalog
-    readValue(readFile)
+    val readVal = asDigital orElse asAnalog
+    readVal(readFile)
   }
 
   def readAnalog: Analog = Analog(readFile)
@@ -86,7 +86,7 @@ class GPIO(pin: Int) {
     case "1" => on
   }
 
-  private def readFile: String = Files.readAllLines(Paths get s"$filepath/gpio$pin/value", StandardCharsets.UTF_8)
+  private def readFile: String = Files.readAllLines(Paths get s"$filepath/gpio$pin/value", StandardCharsets.UTF_8).get(0)
 
   private def write(value: Value, path: Path): Unit = {
     Files write(path, value.value.getBytes(StandardCharsets.UTF_8), StandardOpenOption.CREATE)
